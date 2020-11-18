@@ -23,11 +23,11 @@ class LinkedList():
             self.head = newNode
             return
 
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
+        lastNode = self.head
+        while lastNode.next:
+            lastNode = lastNode.next
 
-        last_node.next = newNode
+        lastNode.next = newNode
 
 
 lList = LinkedList()
