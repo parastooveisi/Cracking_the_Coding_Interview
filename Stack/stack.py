@@ -12,7 +12,7 @@ class Stack:
         return self.items
 
     def isEmpty(self):
-        return items == []
+        return self.items == []
 
     def whatIsTheTop(self):
         if not self.isEmpty():
