@@ -1,3 +1,11 @@
+# You have two numbers represented by a linked list
+# Write a function that adds the two numbers and returns the sum as a linked list.
+# EXAMPLE Input: (7-> 1  -> 6)  + (5  ->  9  ->  2).
+# That is 617 +  295.
+# Output: 2  ->  1 ->  9.
+# That is, 912.
+
+
 class Node:
     def __init__(self, data):
         self.data = data

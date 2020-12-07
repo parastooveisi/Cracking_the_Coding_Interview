@@ -32,11 +32,15 @@ class LinkedList:
         curr = self.head
         if curr.data == key:
             self.head = curr.next
-            curr = None
+            self.head = None
         prev = None
         while curr and curr.data != key:
             prev = curr
             curr = curr.next
+
+        if not curr:
+            return
+
         prev.next = curr.next
         curr = None
 
@@ -46,6 +50,5 @@ lList.append("A")
 lList.append("B")
 lList.append("C")
 lList.append("D")
-lList.deletion("B")
-
+lList.append("E")
 lList.printList()

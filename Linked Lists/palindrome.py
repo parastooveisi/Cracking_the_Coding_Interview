@@ -1,3 +1,6 @@
+# Implement a function to check if a linked list is a palindrome
+
+
 class Node:
     def __init__(self, data):
         self.data = data
