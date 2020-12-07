@@ -1,3 +1,6 @@
+# Given two strings, write a method to decide if one is a permutation of the other.
+
+
 # o(n)
 def permutation(inputStr1, inputStr2):
     inputStr1, inputStr2 = inputStr1.lower(), inputStr2.lower()

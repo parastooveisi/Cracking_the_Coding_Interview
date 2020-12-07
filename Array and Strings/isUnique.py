@@ -1,3 +1,6 @@
+# Check if all the characters in a string are unique
+
+
 def isUnique(inputStr):
     hashMap = {}
 

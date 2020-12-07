@@ -1,3 +1,6 @@
+# Write a method to replace all spaces in a string with '%20'
+
+
 def URLify(inputStr, length):
     result = ""
     for i in range(length):
