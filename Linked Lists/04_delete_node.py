@@ -28,7 +28,7 @@ class LinkedList:
 
         lastNode.next = newNode
 
-    def deletion(self, key):
+    def delete_node(self, key):
         curr = self.head
         if curr.data == key:
             self.head = curr.next
