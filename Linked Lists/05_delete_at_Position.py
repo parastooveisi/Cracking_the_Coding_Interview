@@ -1,8 +1,3 @@
-# Given a key(data field) delete node with this field
-# Input: A -> B -> C -> D
-# Output: A -> C -> D
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -27,23 +22,27 @@ class LinkedList:
             return
 
         lastNode = self.head
-
         while lastNode.next:
             lastNode = lastNode.next
 
         lastNode.next = newNode
 
-    def delete_node(self, key):
-        curr = self.head
-        if curr.data == key:
-            self.head = curr.next
-            self.head = None
+    def delete_at_position(self, pos):
+
+        if pos == 0:
+            self.head = self.head.next
+            return
+
         prev = None
-        while curr and curr.data != key:
+        count = 1
+        curr = self.head
+
+        while curr and count != pos:
             prev = curr
             curr = curr.next
+            count += 1
 
-        if not curr:
+        if curr is None:
             return
 
         prev.next = curr.next
@@ -56,4 +55,7 @@ lList.append("B")
 lList.append("C")
 lList.append("D")
 lList.append("E")
+
+lList.delete_at_position(0)
+
 lList.printList()
