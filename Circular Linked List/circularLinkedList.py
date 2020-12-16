@@ -33,17 +33,16 @@ class CircularLinkedList:
 
     def prepend(self, data):
         new_node = Node(data)
-        cur = self.head
-        new_node.next = self.head
-
         if not self.head:
             new_node.next = new_node
             return
 
-        while cur.next != self.head:
-            cur = cur.next
+        last = self.head
+        while last.next != self.head:
+            last = last.next
 
-        cur.next = new_node
+        last.next = new_node
+        new_node.next = self.head
         self.head = new_node
 
 
