@@ -1,3 +1,8 @@
+# 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> None
+# Rotate on Node 4
+# 5 -> 6 -> 1 -> 2 -> 3 -> 4
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -35,12 +40,12 @@ class LinkedList:
 
         while curr.next:
             if curr.data == data:
-                pivot = curr
+                temp = curr
             curr = curr.next
 
         curr.next = self.head
-        self.head = pivot.next
-        pivot.next = None
+        self.head = temp.next
+        temp.next = None
 
 
 llist = LinkedList()
