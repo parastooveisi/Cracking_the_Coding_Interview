@@ -32,10 +32,10 @@ class LinkedList:
         prev = None
 
         while curr:
-            nxt = curr.next
+            temp = curr.next
             curr.next = prev
             prev = curr
-            curr = nxt
+            curr = temp
 
         self.head = prev
 
