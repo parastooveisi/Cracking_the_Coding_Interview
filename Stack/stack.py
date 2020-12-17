@@ -17,15 +17,3 @@ class Stack:
     def whatIsTheTop(self):
         if not self.isEmpty():
             return self.items[-1]
-
-
-s = Stack()
-s.push("A")
-s.push("B")
-s.push("C")
-print(s.getStack())
-
-s.pop()
-print(s.getStack())
-
-print(s.whatIsTheTop())
