@@ -27,35 +27,35 @@ class LinkedList:
         last_node.next = new_node
 
     def merge_lists(self, llist):
-        temp = dummy = LinkedList()
+
+        result = LinkedList()
         l1 = llist.head
         l2 = self.head
         while l1 and l2:
             if l1.data <= l2.data:
-                temp.next = l1
+                result.next = l1
                 l1 = l1.next
             else:
-                temp.next = l2
+                result.next = l2
                 l2 = l2.next
-            temp = temp.next
-        temp.next = l1 or l2
+            result = result.next
 
-        return dummy.next
+        result.next = l1 or l2
+        return result
 
 
 llist1 = LinkedList()
 llist1.append(1)
 llist1.append(5)
 llist1.append(7)
-llist1.append(9)
-llist1.append(10)
+llist1.append(8)
 
 llist2 = LinkedList()
 llist2.append(2)
 llist2.append(3)
 llist2.append(4)
 llist2.append(6)
-llist2.append(8)
+
 
 llist1.merge_lists(llist2)
 llist1.print_list()
