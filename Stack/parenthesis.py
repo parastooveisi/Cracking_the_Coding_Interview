@@ -1,22 +1,4 @@
-class Stack:
-    def __init__(self):
-        self.items = []
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        return self.items.pop()
-
-    def isEmpty(self):
-        return self.items == []
-
-    def getStack(self):
-        return self.items
-
-    def last(self):
-        if not self.isEmpty():
-            return self.items[-1]
+from stack import Stack
 
 
 def balance(p1, p2):
