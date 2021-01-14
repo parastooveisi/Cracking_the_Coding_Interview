@@ -14,6 +14,6 @@ class Stack:
     def isEmpty(self):
         return self.items == []
 
-    def whatIsTheTop(self):
+    def peek(self):
         if not self.isEmpty():
             return self.items[-1]
