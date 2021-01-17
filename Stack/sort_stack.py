@@ -1,4 +1,5 @@
 # Write a program to sort a stack such that the smallest items are on the top
+# Explanation : https://www.geeksforgeeks.org/sort-stack-using-temporary-stack/
 
 from stack import Stack
 
