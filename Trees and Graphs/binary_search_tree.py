@@ -44,3 +44,11 @@ class BinarySearchTree:
                 return True
 
         return False
+
+    def height_of_tree(self, node):
+        if not node:
+            return -1
+        left_height = self.height_of_tree(node.left)
+        right_height = self.height_of_tree(node.right)
+
+        return max(left_height, right_height) + 1
